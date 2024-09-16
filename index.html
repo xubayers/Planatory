@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./src/output.css" />
+  </head>
+  <body class="bg-mainBg text-white">
+    <!-- header -->
+    <header class="ctnr">
+      <nav class="flex justify-between mt-4">
+        <h1 class="text-xl font-bold">Planatory</h1>
+        <ul class="flex space-x-12 justify-center">
+          <li class="cursor-pointer text-orange-300">People</li>
+          <li class="cursor-pointer">Posts</li>
+          <button class="btnPrimary" id="signUpBtn" onclick="showSignUpPage()">
+            Sign Up
+          </button>
+          <h3
+            id="showLoggedUserName"
+            title="profile"
+            class="text-[16px] capitalize font-bold hidden border px-3 py1 cursor-pointer rounded-md"
+          ></h3>
+        </ul>
+      </nav>
+      <!-- sign up form-->
+      <section id="formPage" class="form text-center hidden">
+        <div class="bg-zinc-800 p-10 rounded-lg relative">
+          <span class="close" onclick="closeSignUpForm()">+</span>
+          <h1 class="mb-4 text-2xl">Sign Up</h1>
+          <div class="signUp">
+            <p>Sign Up with</p>
+            <img
+              src="./images/google-search-icon-google-product-illustration-free-png.webp"
+              alt=""
+              class="h-4"
+            />
+          </div>
+          <form>
+            <label>
+              <span class="lbl">Name:</span>
+              <input
+                type="text"
+                id=""
+                placeholder="First Name"
+                class="forminp"
+              />
+              <input
+                type="text"
+                id=""
+                placeholder="Last Name"
+                class="forminp"
+              /> </label
+            ><br />
+            <label>
+              <span class="lbl">Email:</span
+              ><input
+                type="email"
+                id=""
+                placeholder="Enter Email"
+                class="forminp mt-3 w-10/12"
+              /> </label
+            ><br />
+            <label>
+              <span class="lbl">Password:</span
+              ><input
+                type="password"
+                id=""
+                placeholder="Password"
+                class="forminp mt-3 w-9/12"
+              />
+            </label>
+            <label>
+              <button type="submit" class="btnPrimary mt-3">CREATE</button>
+            </label>
+          </form>
+        </div>
+      </section>
+    </header>
+    <main>
+      <!-- title -->
+      <section class="ctnr mt-14">
+        <div>
+          <h1 class="text-2xl">Subscribe people</h1>
+          <p class="text-gray-300 mt-2 md:w-2/4 w-4/5">
+            helps users easily manage and follow their favorite channels and
+            content all in one place.
+          </p>
+        </div>
+      </section>
+      <!-- popular people cards -->
+      <section class="ctnr mt-6 grid lg:grid-cols-3 grid-cols-2 space-x-5">
+        <div class="card">
+          <!-- img -->
+          <div class="md:w-40 md:h-32 h-36">
+            <img class="imgBox" src="./images/1676522040.jpg" alt="" />
+          </div>
+          <!-- name and more infos -->
+          <div class="nam">
+            <div>
+              <h2 class="text-2xl text-gray-200">Sumit Saha</h2>
+              <p class="md:text-[16px] text-[14px] mt-1 text-zinc-300">
+                Co Founder of Analyzen
+              </p>
+            </div>
+            <button class="sBtn">Subscribe</button>
+          </div>
+        </div>
+        <!-- card 2  -->
+        <div class="card">
+          <!-- img -->
+          <div class="md:w-40 md:h-32 h-36">
+            <img class="imgBox" src="./images/images.jpeg" alt="" />
+          </div>
+          <!-- name and more infos -->
+          <div class="nam">
+            <div>
+              <h2 class="text-2xl text-gray-200">HM Nayem</h2>
+              <p class="md:text-[16px] text-[14px] mt-1 text-zinc-300">
+                Employee of Toptal
+              </p>
+            </div>
+            <button class="sBtn">Subscribe</button>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="./app.js"></script>
+  </body>
+</html>
