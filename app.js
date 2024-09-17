@@ -1,18 +1,18 @@
 import loadEverything from "./personCard.js";
 
 // show sing up
-function showSignUpPage() {
-  const formPage = document.querySelector("#formPage");
-  formPage.classList.remove("hidden");
-}
-// close sign up
-function closeSignUpForm() {
-  const formPage = document.querySelector("#formPage");
-  formPage.classList.add("hidden");
+document.querySelector("#signUpBtn").addEventListener("click", openSignUp);
+function openSignUp() {
+  document.querySelector("#formPage").classList.remove("hidden");
 }
 
+// close sign up
+document.querySelector(".close").addEventListener("click", closeSignUpForm);
+function closeSignUpForm() {
+  document.querySelector("#formPage").classList.add("hidden");
+}
 // handle form
-let users = [];
+export let users = [];
 const form = document.querySelector("form");
 
 form.addEventListener("submit", function (e) {
@@ -40,7 +40,7 @@ form.addEventListener("submit", function (e) {
         break;
     }
   }
-  user.isLoaggedIn = true;
+  newUser.isLoaggedIn = true;
 
   users.push(newUser);
   setTimeout(() => {

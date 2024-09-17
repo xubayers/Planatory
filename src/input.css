@@ -36,4 +36,31 @@
   .signUp {
     @apply flex items-center space-x-2 border px-2 py-1 w-40 justify-center rounded-lg mx-auto mb-4 cursor-pointer;
   }
+  .popUpMessege {
+    @apply absolute -top-8 left-1/2 -translate-x-1/2 bg-gray-700 z-10 px-4 py-1 capitalize text-sm text-slate-100 rounded-md mx-auto;
+  }
+}
+
+.popUpShow {
+  animation: animate 4s linear;
+}
+
+@keyframes animate {
+  0%,
+  80%,
+  90%,
+  100% {
+    transform: translateY(-32px);
+  }
+  15%,
+  30%,
+  40%,
+  45%,
+  50%,
+  55%,
+  60%,
+  70%,
+  75% {
+    transform: translateY(64px);
+  }
 }

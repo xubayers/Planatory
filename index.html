@@ -9,14 +9,13 @@
   <body class="bg-mainBg text-white">
     <!-- header -->
     <header class="ctnr">
+      <p id="popup" class="popUpMessege">You Should Login first !</p>
       <nav class="flex justify-between mt-4">
         <h1 class="text-xl font-bold">Planatory</h1>
         <ul class="flex space-x-12 justify-center">
           <li class="cursor-pointer text-orange-300">People</li>
           <li class="cursor-pointer">Posts</li>
-          <button class="btnPrimary" id="signUpBtn" onclick="showSignUpPage()">
-            Sign Up
-          </button>
+          <button class="btnPrimary" id="signUpBtn">Sign Up</button>
           <h3
             id="showLoggedUserName"
             title="profile"
@@ -27,7 +26,7 @@
       <!-- sign up form-->
       <section id="formPage" class="form text-center hidden">
         <div class="bg-zinc-800 p-10 rounded-lg relative">
-          <span class="close" onclick="closeSignUpForm()">+</span>
+          <span class="close">+</span>
           <h1 class="mb-4 text-2xl">Sign Up</h1>
           <div class="signUp">
             <p>Sign Up with</p>
@@ -42,13 +41,13 @@
               <span class="lbl">Name:</span>
               <input
                 type="text"
-                id=""
+                id="1"
                 placeholder="First Name"
                 class="forminp"
               />
               <input
                 type="text"
-                id=""
+                id="2"
                 placeholder="Last Name"
                 class="forminp"
               /> </label
@@ -57,7 +56,7 @@
               <span class="lbl">Email:</span
               ><input
                 type="email"
-                id=""
+                id="3"
                 placeholder="Enter Email"
                 class="forminp mt-3 w-10/12"
               /> </label
@@ -66,7 +65,7 @@
               <span class="lbl">Password:</span
               ><input
                 type="password"
-                id=""
+                id="4"
                 placeholder="Password"
                 class="forminp mt-3 w-9/12"
               />
