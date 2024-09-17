@@ -1,3 +1,5 @@
+import loadEverything from "./personCard.js";
+
 // show sing up
 function showSignUpPage() {
   const formPage = document.querySelector("#formPage");
@@ -15,7 +17,9 @@ const form = document.querySelector("form");
 
 form.addEventListener("submit", function (e) {
   e.preventDefault();
-  let newUser = {};
+  let newUser = {
+    isLoaggedIn: false,
+  };
   for (let inp of form) {
     switch (inp.placeholder) {
       case "First Name":
@@ -36,18 +40,24 @@ form.addEventListener("submit", function (e) {
         break;
     }
   }
+  user.isLoaggedIn = true;
+
   users.push(newUser);
   setTimeout(() => {
     closeSignUpForm();
-  }, 1000);
+  }, 1500);
 
   document.querySelector("#signUpBtn").classList.add("hidden");
   let userName = document.querySelector("#showLoggedUserName");
   userName.classList.remove("hidden");
 
   for (let user of users) {
-    userName.innerText = user.FirstName;
+    if (user.isLoaggedIn) {
+      userName.innerText = user.FirstName;
+    }
   }
 });
 
-// is User Logged in
+// popular people
+
+window.addEventListener("load", loadEverything);
